@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Slider</title>
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/mobile.css" />
+    <link
+      rel="stylesheet"
+      media="(min-width: 1024px)"
+      href="./css/desktop.css"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="header">
+        <button class="configuration">
+          <img
+            class="configuration__image"
+            src="./assets/images/gear.svg"
+            alt="Icone de engrenagem para configurações"
+          />
+        </button>
+      </header>
+      <h1 class="title">Pokémon Randomizer</h1>
+
+      <section class="controller-modal">
+        <header class="controller-modal__header">
+          <h2 class="controller-modal__title">Controle de CSS</h2>
+          <button class="controller-modal__close">
+            <img
+              class="controller-modal__close__image"
+              src="./assets/images/close.svg"
+              alt="Icone X para fechar modal"
+            />
+          </button>
+        </header>
+
+        <div class="controller-modal__container">
+          <div class="controller-modal__item">
+            <label for="gap-size">Gap Size (px)</label>
+            <input
+              type="range"
+              value="24"
+              id="gap-size"
+              name="gap-size"
+              min="8"
+              max="64"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="border-radius">Border Radius (px)</label
+            ><input
+              type="range"
+              value="8"
+              id="border-radius"
+              name="border-radius"
+              min="0"
+              max="64"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="text-size">Text Size (px)</label>
+            <input
+              type="range"
+              value="24"
+              id="text-size"
+              name="text-size"
+              min="12"
+              max="64"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="title-size">Title Size (px)</label>
+            <input
+              type="range"
+              value="32"
+              id="title-size"
+              name="title-size"
+              min="24"
+              max="88"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="image-width">Image Width (%)</label>
+            <input
+              type="range"
+              value="100"
+              id="image-width"
+              name="image-width"
+              min="50"
+              max="100"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="card-size">Card Size (px)</label>
+            <input
+              type="range"
+              value="250"
+              id="card-size"
+              name="card-size"
+              min="150"
+              max="360"
+            />
+          </div>
+          <div class="controller-modal__item">
+            <label for="gradient-direction">Gradient Direction (deg)</label
+            ><input
+              type="range"
+              value="45"
+              id="gradient-direction"
+              name="gradient-direction"
+              min="0"
+              max="360"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="pokemon-container"></section>
+    </main>
+
+    <script src="./scripts/app.js" type="module"></script>
+  </body>
+</html>

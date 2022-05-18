@@ -1,0 +1,19 @@
+* {
+  text-rendering: optimizeLegibility;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+main {
+  position: relative;
+}
+
+body,
+html {
+  margin: 0;
+}
+
+body {
+  padding: 1rem;
+}

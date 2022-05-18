@@ -1,0 +1,9 @@
+:root {
+  --gap-size: 24px;
+  --border-radius: 8px;
+  --text-size: 24px;
+  --title-size: 32px;
+  --image-width: 100%;
+  --card-size: 250px;
+  --gradient-direction: 45deg;
+}
