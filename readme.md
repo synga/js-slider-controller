@@ -10,3 +10,8 @@ randomicamente um numero de itens para criar uma grid.
 
 Com isso, é possivel mudar alguns aspectos do CSS, como font size, gap, tamanho dos cards e outros, através
 de um tooltip que tem range sliders.
+
+
+## Executável
+
+A aplicação pode ser utilizada por esse link https://synga.github.io/js-slider-controller/ 
