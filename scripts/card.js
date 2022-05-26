@@ -25,7 +25,7 @@ const pokemonTypesColors = new Map([
 ]);
 
 const generateBackgroundGradient = (types) => {
-  let gradient = 'linear-gradient(45deg';
+  let gradient = 'linear-gradient(var(--gradient-direction)';
   types.forEach(
     (type) => (gradient = gradient + `, ${pokemonTypesColors.get(type)}`)
   );

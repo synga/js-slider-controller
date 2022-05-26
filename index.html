@@ -7,7 +7,6 @@
     <title>JS Slider</title>
     <link rel="stylesheet" href="./css/variables.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/mobile.css" />
     <link
       rel="stylesheet"
       media="(min-width: 1024px)"
@@ -17,7 +16,7 @@
   <body>
     <main>
       <header class="header">
-        <button class="configuration">
+        <button class="configuration" id="open-modal">
           <img
             class="configuration__image"
             src="./assets/images/gear.svg"
@@ -25,12 +24,12 @@
           />
         </button>
       </header>
-      <h1 class="title">Pokémon Randomizer</h1>
 
+      <!-- MODAL CONTROLADORES -->
       <section class="controller-modal">
         <header class="controller-modal__header">
           <h2 class="controller-modal__title">Controle de CSS</h2>
-          <button class="controller-modal__close">
+          <button class="controller-modal__close" id="close-modal">
             <img
               class="controller-modal__close__image"
               src="./assets/images/close.svg"
@@ -119,6 +118,9 @@
           </div>
         </div>
       </section>
+      <!-- FIM MODAL CONTROLADORES -->
+
+      <h1 class="title">Pokémon Randomizer</h1>
 
       <section class="pokemon-container"></section>
     </main>
