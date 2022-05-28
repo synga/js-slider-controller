@@ -12,3 +12,7 @@ Com isso, é possivel mudar alguns aspectos do CSS, como font size, gap, tamanho
 de um tooltip que tem range sliders.
 
 Foram adicionados comentários em todas as funções explicando melhor o que foi feito e para que server.
+
+## Executável
+
+A aplicação pode ser utilizada por esse link https://synga.github.io/js-slider-controller/
