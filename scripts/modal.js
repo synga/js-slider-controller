@@ -19,8 +19,8 @@ const toggleModalDisplay = (state) => {
 export const createModalListeners = () => {
   document
     .querySelector('#open-modal')
-    .addEventListener('click', toggleModalDisplay.bind('block'));
+    .addEventListener('click', toggleModalDisplay.bind(null, 'block'));
   document
     .querySelector('#close-modal')
-    .addEventListener('click', toggleModalDisplay.bind('none'));
+    .addEventListener('click', toggleModalDisplay.bind(null, 'none'));
 };
