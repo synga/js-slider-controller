@@ -10,3 +10,5 @@ randomicamente um numero de itens para criar uma grid.
 
 Com isso, é possivel mudar alguns aspectos do CSS, como font size, gap, tamanho dos cards e outros, através
 de um tooltip que tem range sliders.
+
+Foram adicionados comentários em todas as funções explicando melhor o que foi feito e para que server.

@@ -1,26 +1,21 @@
-import { API_URL } from './env.js';
+import { API_URL, POKEMON_COUNT } from './env.js';
 import { createPokemonCard } from './card.js';
 import { createSlidersEvents } from './controllers.js';
-
-document.addEventListener('DOMContentLoaded', createSlidersEvents);
+import { createModalListeners } from './modal.js';
 
 /**
- * Quantidade de pokémons existentes
+ * Ao carregar o conteudo da DOM, cria os listeners de sliders e modal.
  */
-const POKEMON_COUNT = 898;
-
-const modal = document.querySelector('.controller-modal');
-
-document.querySelector('#open-modal').addEventListener('click', () => {
-  modal.style.display = 'block';
-});
-
-document.querySelector('#close-modal').addEventListener('click', () => {
-  modal.style.display = 'none';
+document.addEventListener('DOMContentLoaded', () => {
+  createSlidersEvents();
+  createModalListeners();
 });
 
 /**
- * IIFE que inicializa a aplicação
+ * IIFE que inicializa a aplicação;
+ * Como quero fazer apenas 25 cards, crio um for simples. A cada iteração ele gera um id randomico entre
+ * 1 e o numero maximo, depois chama a função que cria o card de pokemon passando a url com o ID do
+ * pokemon randomico.
  */
 (function () {
   for (let i = 0; i < 25; i++) {

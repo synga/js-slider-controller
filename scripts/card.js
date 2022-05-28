@@ -3,6 +3,9 @@
  */
 const POKEMON_CONTAINER = document.querySelector('.pokemon-container');
 
+/**
+ * Map contendo as cores de cada tipo
+ */
 const pokemonTypesColors = new Map([
   ['normal', '#A8A878'],
   ['fighting', '#C03028'],
@@ -24,21 +27,36 @@ const pokemonTypesColors = new Map([
   ['fairy', '#EE99AC'],
 ]);
 
-const generateBackgroundGradient = (types) => {
-  let gradient = 'linear-gradient(var(--gradient-direction)';
-  types.forEach(
-    (type) => (gradient = gradient + `, ${pokemonTypesColors.get(type)}`)
-  );
-  gradient += ')';
-  return gradient;
+/**
+ * Função para gerar a cor de fundo. Verifica se existem duas cores no array de types, se sim, gera um
+ * gradiente a partir dessas cores. Se não, retorna apenas a cor na primeira posição do array.
+ * As cores são selecionadas em um map que contem a cor de cada tipo.
+ */
+const generateBackgroundColor = (types) => {
+  if (types.length > 1) {
+    let gradient = 'linear-gradient(var(--gradient-direction)';
+    types.forEach(
+      (type) => (gradient = gradient + `, ${pokemonTypesColors.get(type)}`)
+    );
+    gradient += ')';
+    return gradient;
+  }
+  return pokemonTypesColors.get(types[0]);
 };
 
+/**
+ * Popula o card com a imagem e titulo dele, depois insere esse card no container onde os cards
+ * de pokémon devem ficar
+ */
 const insertPokemonCard = (pokemonCard, pokemonImage, pokemonName) => {
   pokemonCard.appendChild(pokemonImage);
   pokemonCard.appendChild(pokemonName);
   POKEMON_CONTAINER.appendChild(pokemonCard);
 };
 
+/**
+ * Cria o nome do pokémon e atribui a classede CSS necessária
+ */
 const createPokemonName = async (name) => {
   const pokemonName = document.createElement('h2');
   pokemonName.innerText = name;
@@ -46,6 +64,9 @@ const createPokemonName = async (name) => {
   return pokemonName;
 };
 
+/**
+ * Cria a imagem do pokémon e atribui a classe de CSS necessária
+ */
 const createPokemonSprite = async (image) => {
   const pokemonImage = document.createElement('img');
   pokemonImage.classList.add('pokemon-card__sprite');
@@ -53,13 +74,13 @@ const createPokemonSprite = async (image) => {
   return pokemonImage;
 };
 
+/**
+ * Cria o container do card de pokémon e também chama a função que gera a cor de background
+ */
 const createPokemonContainer = async (types) => {
   const pokemonCard = document.createElement('article');
   pokemonCard.classList.add('pokemon-card');
-  pokemonCard.style.background =
-    types.length > 1
-      ? generateBackgroundGradient(types)
-      : pokemonTypesColors.get(types[0]);
+  pokemonCard.style.background = generateBackgroundColor(types);
   return pokemonCard;
 };
 
